@@ -1,0 +1,23 @@
+{
+  "name": "carlo-nativefier",
+  "version": "1.0.0",
+  "main": "cli.js",
+  "bin": {
+    "carlo-nativefier": "cli.js"
+  },
+  "author": "atabel",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atabel/carlo-nativefier.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atabel/carlo-nativefier/issues"
+  },
+  "homepage": "https://github.com/atabel/carlo-nativefier#readme",
+  "dependencies": {
+    "carlo": "^0.9.41",
+    "page-icon": "^0.3.0",
+    "pkg": "^4.3.5"
+  }
+}
