@@ -2,16 +2,25 @@
 
 const fs = require("fs");
 const path = require("path");
+const { parse: parseUrl } = require("url");
 const pkg = require("pkg");
 const pageIcon = require("page-icon");
 
 const params = process.argv.slice(2);
 
-const [url, name] = params;
+let [url, name] = params;
 
-if (!url || !name) {
-  console.log("provide url and name");
+if (!url) {
+  console.log("You need to provide an url");
   return;
+}
+
+if (!parseUrl(url).protocol) {
+  url = `https://${url}`;
+}
+
+if (!name) {
+  name = parseUrl(url).hostname;
 }
 
 (async () => {
